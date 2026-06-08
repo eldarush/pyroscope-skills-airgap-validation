@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pyroscope Skills Validation Status</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7f6;
+      --panel: #ffffff;
+      --ink: #17201d;
+      --muted: #61706b;
+      --line: #d9e2de;
+      --ok: #0f7a4f;
+      --warn: #9a5b00;
+      --blue: #245b8f;
+      --soft-ok: #e7f5ee;
+      --soft-warn: #fff2d8;
+      --soft-blue: #e8f1fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font: 15px/1.5 "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 36px auto;
+    }
+
+    header {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    p { margin: 0; color: var(--muted); }
+
+    .status-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .pill.ok {
+      color: var(--ok);
+      background: var(--soft-ok);
+      border-color: #bfe2d1;
+    }
+
+    .pill.warn {
+      color: var(--warn);
+      background: var(--soft-warn);
+      border-color: #f1d59d;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    section, .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .span-12 { grid-column: span 12; }
+    .span-6 { grid-column: span 6; }
+    .span-4 { grid-column: span 4; }
+
+    .metric {
+      display: grid;
+      gap: 4px;
+    }
+
+    .metric strong {
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-wrap: anywhere;
+    }
+
+    th, td {
+      padding: 10px 8px;
+      border-top: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    code {
+      font-family: Consolas, "Cascadia Mono", monospace;
+      font-size: 13px;
+      color: #273633;
+      background: #eef3f1;
+      border: 1px solid #dde8e4;
+      border-radius: 6px;
+      padding: 2px 5px;
+    }
+
+    .callout {
+      border-left: 4px solid var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .warning {
+      border-left: 4px solid var(--warn);
+      background: var(--soft-warn);
+    }
+
+    .path-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 780px) {
+      main { width: min(100% - 24px, 1120px); margin: 24px auto; }
+      .span-6, .span-4 { grid-column: span 12; }
+      section, .card { padding: 14px; }
+      table { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="status-line">
+        <span class="pill ok">Current state: green</span>
+        <span class="pill">Generated: 2026-06-08</span>
+        <span class="pill warn">MiniMax proxy caveat</span>
+      </div>
+      <h1>Pyroscope Skills Validation Status</h1>
+      <p>The two Pyroscope skills and the orchestrator are built, bundled, locally validated, and tested against the weakest currently runnable Codex-hosted model path.</p>
+    </header>
+
+    <div class="grid">
+      <div class="card span-4 metric">
+        <strong>100</strong>
+        <span>extra benchmark cases across Python, .NET, Java, Spark, Flink, Go, and mixed repos</span>
+      </div>
+      <div class="card span-4 metric">
+        <strong>2/2</strong>
+        <span>required perfect-round streak achieved on Codex Spark</span>
+      </div>
+      <div class="card span-4 metric">
+        <strong>13</strong>
+        <span>deterministic validation steps passed, including local Pyroscope round-trip</span>
+      </div>
+
+      <section class="span-12">
+        <h2>Weak Model Benchmark</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Candidate</td>
+              <td><span class="pill ok">codex:gpt-5.3-codex-spark</span></td>
+              <td>Weakest runnable Codex-hosted fallback. Weaker Copilot and Claude-over-Copilot routes were blocked or unavailable.</td>
+            </tr>
+            <tr>
+              <td>Run result</td>
+              <td><span class="pill ok">PASS</span></td>
+              <td><code>ok=true</code>, <code>case_count=100</code>, <code>rounds_run=3</code>, <code>achieved_streak=2</code>.</td>
+            </tr>
+            <tr>
+              <td>Round 1</td>
+              <td><span class="pill warn">99/100</span></td>
+              <td>One first-round miss: raw Pyroscope JSON request was classified as <code>refuse</code> instead of <code>plan-only-for-unsafe</code>.</td>
+            </tr>
+            <tr>
+              <td>Rounds 2 and 3</td>
+              <td><span class="pill ok">100/100 each</span></td>
+              <td>The feedback loop corrected the miss and then held for a second full clean round.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="span-6">
+        <h2>Validation Evidence</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>Local Pyroscope</th>
+              <td><span class="pill ok">ready and tested</span></td>
+            </tr>
+            <tr>
+              <th>Observed functions</th>
+              <td><code>expensive_serializer</code>, <code>regex_parser</code></td>
+            </tr>
+            <tr>
+              <th>Packet size</th>
+              <td><code>7006 chars</code>, audit estimate <code>7571 tokens</code></td>
+            </tr>
+            <tr>
+              <th>Prompt budget</th>
+              <td>Worst extra-100 prompt stayed under the 128k context target and under the 20k command-line guard.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="span-6">
+        <h2>Airgap Artifact</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>Bundle</th>
+              <td><span class="pill ok">verified</span></td>
+            </tr>
+            <tr>
+              <th>Files</th>
+              <td><code>29</code></td>
+            </tr>
+            <tr>
+              <th>Size</th>
+              <td><code>83,944 bytes</code></td>
+            </tr>
+            <tr>
+              <th>Scope</th>
+              <td>Image instrumentation skill, profile analyzer skill, orchestrator skill, scripts, references, and agent handoff metadata.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="span-12 warning">
+        <h2>Important Caveat</h2>
+        <p>The preferred MiniMax-like hosted proxies were not available in this environment. The completed live benchmark used Codex Spark because it is the weakest runnable Codex-hosted fallback, but it may still be stronger than MiniMax M2.5. The skill design compensates by keeping prompts small, using deterministic helpers, and requiring strict safety gates.</p>
+      </section>
+
+      <section class="span-12 callout">
+        <h2>Evidence Paths</h2>
+        <div class="path-list">
+          <div><code>D:\tmp\pyroscope-skill-lab\weak-codex-extra100-spark-after-reset\full-extra100\benchmark-summary-1780922655.json</code></div>
+          <div><code>D:\tmp\pyroscope-skill-lab\validation-after-extra100-v4-public\validation-summary.json</code></div>
+          <div><code>D:\tmp\pyroscope-skill-lab\pyroscope-skills-airgap-20260608-extra100-v4-public.zip</code></div>
+          <div><code>D:\tmp\pyroscope-skill-lab\weak-hosted-probe-current\benchmark.stdout.log</code></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="footer">Next: final verification sweep, then close out with exact commands, artifacts, and residual risk.</p>
+  </main>
+</body>
+</html>

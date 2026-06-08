@@ -1,0 +1,163 @@
+{
+  "created_at_unix": 1780923306,
+  "file_count": 29,
+  "files": [
+    {
+      "bytes": 275,
+      "path": "pyroscope-image-instrumenter/agents/openai.yaml",
+      "sha256": "6841020ec03cce83e5dc7a3cb33dbb851d73ca1786f95652b1d5fbb4b256cc68"
+    },
+    {
+      "bytes": 1178,
+      "path": "pyroscope-image-instrumenter/assets/python-bootstrap/sitecustomize.py",
+      "sha256": "e6f1f958911583e65dce7467c6bf6dc5879e8509ad2a92f5d2e69adc3261d86e"
+    },
+    {
+      "bytes": 1167,
+      "path": "pyroscope-image-instrumenter/references/airgap-bundle.md",
+      "sha256": "c8bd71f86496f87b8d45d5fda0d9ff8e567aaa4ce5f361b55536f0c855ad0d38"
+    },
+    {
+      "bytes": 3023,
+      "path": "pyroscope-image-instrumenter/references/runtime-matrix.md",
+      "sha256": "7e2895a699521bcbecba4285b3bb5ab151f2208ed464d596325b55e65cd04247"
+    },
+    {
+      "bytes": 9328,
+      "path": "pyroscope-image-instrumenter/scripts/pyroscope_git_workflow.py",
+      "sha256": "46958f28c4c21bcb563b1faa5537bdadc2b92530f8432f9595ea69b54559e3e9"
+    },
+    {
+      "bytes": 5695,
+      "path": "pyroscope-image-instrumenter/scripts/pyroscope_git_workflow_smoke.py",
+      "sha256": "368b975043142869123daf3b96065c5bd3e4e68992c5575dab6e0fd29b9f0d2a"
+    },
+    {
+      "bytes": 7247,
+      "path": "pyroscope-image-instrumenter/scripts/pyroscope_image_docker_smoke.py",
+      "sha256": "7f7ca51766ffdd306c8445c3b9a79539d64a3101d82f5a491c29eca39d7fac24"
+    },
+    {
+      "bytes": 31903,
+      "path": "pyroscope-image-instrumenter/scripts/pyroscope_image_tool.py",
+      "sha256": "06b271ac8d0d26694217a5c5b228261ef6df188865fe2afd62c5a1d994883e94"
+    },
+    {
+      "bytes": 28632,
+      "path": "pyroscope-image-instrumenter/scripts/pyroscope_image_tool_smoke.py",
+      "sha256": "8411acd150e114e4624521fc0893a1774d96c0d3294885c71ef18b4873443688"
+    },
+    {
+      "bytes": 6615,
+      "path": "pyroscope-image-instrumenter/SKILL.md",
+      "sha256": "0d9c954cbc794499fab29ee676c9560457835bb8068c49089195dc51379032c7"
+    },
+    {
+      "bytes": 289,
+      "path": "pyroscope-profile-analyzer/agents/openai.yaml",
+      "sha256": "a795220dde3be560f4abe2db088df22c147e8da25f84e773fa039b5259e90031"
+    },
+    {
+      "bytes": 847,
+      "path": "pyroscope-profile-analyzer/references/pyroscope-api.md",
+      "sha256": "8e4396cb5a325597c5ed58cf0c1841af4d3097e29b62ea15a18e62d06e9a19ed"
+    },
+    {
+      "bytes": 7099,
+      "path": "pyroscope-profile-analyzer/scripts/pyroscope_complex_profile_smoke.py",
+      "sha256": "42816e9fc5c6a8fad546c18ba93f445987750f1b37a09515467abba65c35a83b"
+    },
+    {
+      "bytes": 8607,
+      "path": "pyroscope-profile-analyzer/scripts/pyroscope_local_roundtrip_smoke.py",
+      "sha256": "c23340ad0d85568f82d9a27ff91e39a3702800e912b858f89c21e51acbfef0fd"
+    },
+    {
+      "bytes": 6031,
+      "path": "pyroscope-profile-analyzer/scripts/pyroscope_profile_budget_stress.py",
+      "sha256": "5c503d7d126ff6b2910bad5d14eb30a6b3868dbd1444d88897cf19567191c362"
+    },
+    {
+      "bytes": 22868,
+      "path": "pyroscope-profile-analyzer/scripts/pyroscope_profile_tool.py",
+      "sha256": "faa79d19a8c5cca606847fa35a25a6bc53621df82a449b0bcfc0fedbc021aa9a"
+    },
+    {
+      "bytes": 5703,
+      "path": "pyroscope-profile-analyzer/scripts/pyroscope_stress_fixture.py",
+      "sha256": "7fe1589dab9a377ac11febce0f51601780306dee6d210f078c4259940d8ac8e6"
+    },
+    {
+      "bytes": 4407,
+      "path": "pyroscope-profile-analyzer/SKILL.md",
+      "sha256": "f9cc29e483fb25471bcfa37b3a92392bed22edc8902f2be134c41dbf80d5c8bd"
+    },
+    {
+      "bytes": 256,
+      "path": "pyroscope-orchestrator/agents/openai.yaml",
+      "sha256": "6b7e05d5c8413dabc459149d9d447622be3ef8a6637d2745d9b4792d7e4848c8"
+    },
+    {
+      "bytes": 816,
+      "path": "pyroscope-orchestrator/references/handoff.md",
+      "sha256": "d300a5d4ce189deb8177b3489cd0f6dd06ab5bee0edb2efb74d9e1133c074458"
+    },
+    {
+      "bytes": 6032,
+      "path": "pyroscope-orchestrator/scripts/pyroscope_airgap_bundle.py",
+      "sha256": "0c739a4dc4fa992f355cb3b84b7d8330753aec82179caf619c13893657ea5c28"
+    },
+    {
+      "bytes": 3701,
+      "path": "pyroscope-orchestrator/scripts/pyroscope_orchestrator.py",
+      "sha256": "a472ee19f7c4e8429237a46bed71bc592126e5a691046922e384f7c10b6b11e7"
+    },
+    {
+      "bytes": 5827,
+      "path": "pyroscope-orchestrator/scripts/pyroscope_packet_tool_smoke.py",
+      "sha256": "7dee8faff65c0ad7d0b08af81a0fc3f088b6249fd2cae13759f46e82d598899c"
+    },
+    {
+      "bytes": 10802,
+      "path": "pyroscope-orchestrator/scripts/pyroscope_validation_suite.py",
+      "sha256": "73b745e4189db32bd6b889d0d47d71749934ffa084a979b528d17a560b5da48d"
+    },
+    {
+      "bytes": 9974,
+      "path": "pyroscope-orchestrator/scripts/pyroscope_weak_model_audit.py",
+      "sha256": "941357369e93891b03dbdc527b5b0b4f79fc272896af5445bd5963fac3b92c94"
+    },
+    {
+      "bytes": 74536,
+      "path": "pyroscope-orchestrator/scripts/pyroscope_weak_model_benchmark.py",
+      "sha256": "a25afa3bc6ab2298159023c5486c0404e922a437af95a3b685c9deabd1a16a5d"
+    },
+    {
+      "bytes": 3459,
+      "path": "pyroscope-orchestrator/scripts/pyroscope_weak_model_harness_smoke.py",
+      "sha256": "fc4f664dc32f58609a093b3e5500946037aeff202d9db4676e704bb91c0834ee"
+    },
+    {
+      "bytes": 14215,
+      "path": "pyroscope-orchestrator/scripts/pyroscope_weak_model_packet.py",
+      "sha256": "065bc58e9cae11da435b66ce428f93bbb3c77f8cf3917171a50477dd2af88a85"
+    },
+    {
+      "bytes": 5716,
+      "path": "pyroscope-orchestrator/SKILL.md",
+      "sha256": "cd8dddf5ef85891d27e1ad6136d28169fcd362864c7c5d74aa3ee692526ed25e"
+    }
+  ],
+  "post_import_validation": [
+    "python pyroscope-orchestrator/scripts/pyroscope_orchestrator.py audit",
+    "python pyroscope-orchestrator/scripts/pyroscope_validation_suite.py --out-dir <writable-output-dir>",
+    "python pyroscope-orchestrator/scripts/pyroscope_validation_suite.py --local-pyroscope --pyroscope-url http://localhost:4040 --out-dir <writable-output-dir>"
+  ],
+  "purpose": "Pyroscope skills airgap transfer bundle",
+  "schema_version": 1,
+  "skills": [
+    "pyroscope-image-instrumenter",
+    "pyroscope-profile-analyzer",
+    "pyroscope-orchestrator"
+  ]
+}

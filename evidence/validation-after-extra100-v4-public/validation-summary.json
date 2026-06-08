@@ -1,0 +1,491 @@
+{
+  "ok": true,
+  "deterministic_ok": true,
+  "live_requested": false,
+  "live_blocked": false,
+  "local_pyroscope_requested": true,
+  "out_dir": "D:\\tmp\\pyroscope-skill-lab\\validation-after-extra100-v4-public",
+  "steps": [
+    {
+      "label": "py_compile",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 0.22,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "-m",
+        "py_compile",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-image-instrumenter\\scripts\\pyroscope_image_tool.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-image-instrumenter\\scripts\\pyroscope_image_tool_smoke.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-image-instrumenter\\scripts\\pyroscope_image_docker_smoke.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-image-instrumenter\\scripts\\pyroscope_git_workflow.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-image-instrumenter\\scripts\\pyroscope_git_workflow_smoke.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-profile-analyzer\\scripts\\pyroscope_profile_tool.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-profile-analyzer\\scripts\\pyroscope_stress_fixture.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-profile-analyzer\\scripts\\pyroscope_complex_profile_smoke.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-profile-analyzer\\scripts\\pyroscope_profile_budget_stress.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-profile-analyzer\\scripts\\pyroscope_local_roundtrip_smoke.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_orchestrator.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_weak_model_packet.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_weak_model_audit.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_weak_model_benchmark.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_packet_tool_smoke.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_weak_model_harness_smoke.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_validation_suite.py",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_airgap_bundle.py"
+      ],
+      "json": null,
+      "stdout_tail": "",
+      "stderr_tail": ""
+    },
+    {
+      "label": "orchestrator_audit",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 0.15,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_orchestrator.py",
+        "audit"
+      ],
+      "json": {
+        "ok": true
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"skills\": {\n    \"pyroscope-image-instrumenter\": {\n      \"path\": \"C:\\\\Users\\\\eldar\\\\.codex\\\\skills\\\\pyroscope-image-instrumenter\",\n      \"missing\": [],\n      \"installed\": true\n    },\n    \"pyroscope-profile-analyzer\": {\n      \"path\": \"C:\\\\Users\\\\eldar\\\\.codex\\\\skills\\\\pyroscope-profile-analyzer\",\n      \"missing\": [],\n      \"installed\": true\n    },\n    \"pyroscope-orchestrator\": {\n      \"path\": \"C:\\\\Users\\\\eldar\\\\.codex\\\\skills\\\\pyroscope-orchestrator\",\n      \"missing\": [],\n      \"installed\": true\n    }\n  }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "airgap_bundle_roundtrip",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 0.35,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_airgap_bundle.py",
+        "roundtrip",
+        "--out-dir",
+        "D:\\tmp\\pyroscope-skill-lab\\validation-after-extra100-v4-public\\airgap-bundle"
+      ],
+      "json": {
+        "ok": true,
+        "file_count": 29,
+        "audit_ok": true
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"bundle\": \"D:\\\\tmp\\\\pyroscope-skill-lab\\\\validation-after-extra100-v4-public\\\\airgap-bundle\\\\pyroscope-skills-airgap.zip\",\n  \"extract_dir\": \"D:\\\\tmp\\\\pyroscope-skill-lab\\\\validation-after-extra100-v4-public\\\\airgap-bundle\\\\extract\",\n  \"file_count\": 29,\n  \"bytes\": 83945,\n  \"audit_ok\": true\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "image_smoke",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 11.86,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-image-instrumenter\\scripts\\pyroscope_image_tool_smoke.py"
+      ],
+      "json": {
+        "ok": true,
+        "cases": [
+          {
+            "case": "python-multistage-user-gitlab-ci",
+            "ok": true
+          },
+          {
+            "case": "python-github-ci-single-pyroscope-suffix",
+            "ok": true
+          },
+          {
+            "case": "python-nested-dockerfile-explicit-ci-paths",
+            "ok": true
+          },
+          {
+            "case": "python-compose-explicit-build-context-verify-plan",
+            "ok": true
+          },
+          {
+            "case": "dotnet-multistage-user",
+            "ok": true
+          },
+          {
+            "case": "dotnet-alpine-arm64-refuses",
+            "ok": true
+          },
+          {
+            "case": "dotnet-alpine-amd64-uses-musl-profiler",
+            "ok": true
+          },
+          {
+            "case": "dotnet-alpine-airgap-requires-musl-assets",
+            "ok": true
+          },
+          {
+            "case": "dotnet-alpine-airgap-uses-musl-assets",
+            "ok": true
+          },
+          {
+            "case": "dotnet-aliased-alpine-arm64-refuses-without-mutation",
+            "ok": true
+          },
+          {
+            "case": "dotnet-linux-armv7-refuses",
+            "ok": true
+          },
+          {
+            "case": "explicit-dotnet-non-dotnet-base-refuses",
+            "ok": true
+          },
+          {
+            "case": "java-user",
+            "ok": true
+          },
+          {
+            "case": "java-preserves-existing-tool-options",
+            "ok": true
+          },
+          {
+            "case": "spark-image",
+            "ok": true
+          },
+          {
+            "case": "flink-image",
+            "ok": true
+          },
+          {
+            "case": "go-without-pprof-refuses",
+            "ok": true
+          },
+          {
+            "case": "go-pprof-import-without-listener-refuses",
+            "ok": true
+          },
+          {
+            "case": "go-existing-pprof-conditional",
+            "ok": true
+          },
+          {
+            "case": "go-approved-no-source-collector",
+            "ok": true
+          },
+          {
+            "case": "go-nested-collector-outside-build-context-refuses",
+            "ok": true
+          },
+          {
+            "case": "go-nested-collector-inside-build-context",
+            "ok": true
+          },
+          {
+            "case": "python-secret-refuses-before-mutation",
+            "ok": true
+          },
+          {
+            "case": "python-airgap-missing-wheels-refuses",
+            "ok": true
+          },
+          {
+            "case": "monorepo-dockerfile-precedence",
+            "ok": true
+          },
+          {
+            "case": "ambiguous-manifests-require-runtime",
+            "ok": true
+          },
+          {
+            "case": "ambiguous-nested-dockerfiles-require-explicit-path",
+            "ok": true
+          },
+          {
+            "case": "verify-rejects-non-suffix-pyroscope-tag",
+            "ok": true
+          }
+        ]
+      },
+      "stdout_tail": "t-build-context-verify-plan\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"dotnet-multistage-user\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"dotnet-alpine-arm64-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"dotnet-alpine-amd64-uses-musl-profiler\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"dotnet-alpine-airgap-requires-musl-assets\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"dotnet-alpine-airgap-uses-musl-assets\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"dotnet-aliased-alpine-arm64-refuses-without-mutation\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"dotnet-linux-armv7-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"explicit-dotnet-non-dotnet-base-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"java-user\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"java-preserves-existing-tool-options\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"spark-image\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"flink-image\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"go-without-pprof-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"go-pprof-import-without-listener-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"go-existing-pprof-conditional\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"go-approved-no-source-collector\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"go-nested-collector-outside-build-context-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"go-nested-collector-inside-build-context\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"python-secret-refuses-before-mutation\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"python-airgap-missing-wheels-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"monorepo-dockerfile-precedence\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"ambiguous-manifests-require-runtime\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"ambiguous-nested-dockerfiles-require-explicit-path\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"verify-rejects-non-suffix-pyroscope-tag\",\n      \"ok\": true\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "git_workflow_smoke",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 3.86,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-image-instrumenter\\scripts\\pyroscope_git_workflow_smoke.py"
+      ],
+      "json": {
+        "ok": true,
+        "cases": [
+          {
+            "case": "github-feature-branch-pr-plan",
+            "ok": true
+          },
+          {
+            "case": "protected-branch-refuses",
+            "ok": true
+          },
+          {
+            "case": "secret-diff-refuses",
+            "ok": true
+          },
+          {
+            "case": "production-tag-refuses",
+            "ok": true
+          }
+        ]
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"cases\": [\n    {\n      \"case\": \"github-feature-branch-pr-plan\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"protected-branch-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"secret-diff-refuses\",\n      \"ok\": true\n    },\n    {\n      \"case\": \"production-tag-refuses\",\n      \"ok\": true\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "image_docker_smoke",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 12.74,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-image-instrumenter\\scripts\\pyroscope_image_docker_smoke.py"
+      ],
+      "json": {
+        "ok": true,
+        "cases": [
+          {
+            "runtime": "python",
+            "tag": "pyroscope-docker-smoke-python:local-pyroscope",
+            "built": true,
+            "ran": true,
+            "dockerfile": "C:\\Users\\eldar\\AppData\\Local\\Temp\\pyroscope-image-docker-smoke-z4e70vep\\python\\Dockerfile"
+          },
+          {
+            "runtime": "dotnet",
+            "tag": "pyroscope-docker-smoke-dotnet:local-pyroscope",
+            "built": true,
+            "ran": false,
+            "dockerfile": "C:\\Users\\eldar\\AppData\\Local\\Temp\\pyroscope-image-docker-smoke-z4e70vep\\dotnet\\Dockerfile"
+          },
+          {
+            "runtime": "dotnet-musl",
+            "tag": "pyroscope-docker-smoke-dotnet-musl:local-pyroscope",
+            "built": true,
+            "ran": false,
+            "dockerfile": "C:\\Users\\eldar\\AppData\\Local\\Temp\\pyroscope-image-docker-smoke-z4e70vep\\dotnet-musl\\Dockerfile"
+          },
+          {
+            "runtime": "java",
+            "tag": "pyroscope-docker-smoke-java:local-pyroscope",
+            "built": true,
+            "ran": true,
+            "dockerfile": "C:\\Users\\eldar\\AppData\\Local\\Temp\\pyroscope-image-docker-smoke-z4e70vep\\java\\Dockerfile"
+          },
+          {
+            "runtime": "spark",
+            "tag": "pyroscope-docker-smoke-spark:local-pyroscope",
+            "built": true,
+            "ran": true,
+            "dockerfile": "C:\\Users\\eldar\\AppData\\Local\\Temp\\pyroscope-image-docker-smoke-z4e70vep\\spark\\Dockerfile"
+          },
+          {
+            "runtime": "flink",
+            "tag": "pyroscope-docker-smoke-flink:local-pyroscope",
+            "built": true,
+            "ran": true,
+            "dockerfile": "C:\\Users\\eldar\\AppData\\Local\\Temp\\pyroscope-image-docker-smoke-z4e70vep\\flink\\Dockerfile"
+          },
+          {
+            "runtime": "go",
+            "tag": "pyroscope-docker-smoke-go:local-pyroscope",
+            "built": true,
+            "ran": true,
+            "dockerfile": "C:\\Users\\eldar\\AppData\\Local\\Temp\\pyroscope-image-docker-smoke-z4e70vep\\go\\Dockerfile"
+          }
+        ]
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"cases\": [\n    {\n      \"runtime\": \"python\",\n      \"tag\": \"pyroscope-docker-smoke-python:local-pyroscope\",\n      \"built\": true,\n      \"ran\": true,\n      \"dockerfile\": \"C:\\\\Users\\\\eldar\\\\AppData\\\\Local\\\\Temp\\\\pyroscope-image-docker-smoke-z4e70vep\\\\python\\\\Dockerfile\"\n    },\n    {\n      \"runtime\": \"dotnet\",\n      \"tag\": \"pyroscope-docker-smoke-dotnet:local-pyroscope\",\n      \"built\": true,\n      \"ran\": false,\n      \"dockerfile\": \"C:\\\\Users\\\\eldar\\\\AppData\\\\Local\\\\Temp\\\\pyroscope-image-docker-smoke-z4e70vep\\\\dotnet\\\\Dockerfile\"\n    },\n    {\n      \"runtime\": \"dotnet-musl\",\n      \"tag\": \"pyroscope-docker-smoke-dotnet-musl:local-pyroscope\",\n      \"built\": true,\n      \"ran\": false,\n      \"dockerfile\": \"C:\\\\Users\\\\eldar\\\\AppData\\\\Local\\\\Temp\\\\pyroscope-image-docker-smoke-z4e70vep\\\\dotnet-musl\\\\Dockerfile\"\n    },\n    {\n      \"runtime\": \"java\",\n      \"tag\": \"pyroscope-docker-smoke-java:local-pyroscope\",\n      \"built\": true,\n      \"ran\": true,\n      \"dockerfile\": \"C:\\\\Users\\\\eldar\\\\AppData\\\\Local\\\\Temp\\\\pyroscope-image-docker-smoke-z4e70vep\\\\java\\\\Dockerfile\"\n    },\n    {\n      \"runtime\": \"spark\",\n      \"tag\": \"pyroscope-docker-smoke-spark:local-pyroscope\",\n      \"built\": true,\n      \"ran\": true,\n      \"dockerfile\": \"C:\\\\Users\\\\eldar\\\\AppData\\\\Local\\\\Temp\\\\pyroscope-image-docker-smoke-z4e70vep\\\\spark\\\\Dockerfile\"\n    },\n    {\n      \"runtime\": \"flink\",\n      \"tag\": \"pyroscope-docker-smoke-flink:local-pyroscope\",\n      \"built\": true,\n      \"ran\": true,\n      \"dockerfile\": \"C:\\\\Users\\\\eldar\\\\AppData\\\\Local\\\\Temp\\\\pyroscope-image-docker-smoke-z4e70vep\\\\flink\\\\Dockerfile\"\n    },\n    {\n      \"runtime\": \"go\",\n      \"tag\": \"pyroscope-docker-smoke-go:local-pyroscope\",\n      \"built\": true,\n      \"ran\": true,\n      \"dockerfile\": \"C:\\\\Users\\\\eldar\\\\AppData\\\\Local\\\\Temp\\\\pyroscope-image-docker-smoke-z4e70vep\\\\go\\\\Dockerfile\"\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "packet_smoke",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 0.83,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_packet_tool_smoke.py"
+      ],
+      "json": {
+        "ok": true,
+        "cases": 8
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"cases\": 8\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "harness_smoke",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 0.14,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_weak_model_harness_smoke.py"
+      ],
+      "json": {
+        "ok": true,
+        "cases": 5
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"cases\": 5\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "complex_profile_smoke",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 5.73,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-profile-analyzer\\scripts\\pyroscope_complex_profile_smoke.py"
+      ],
+      "json": {
+        "ok": true,
+        "summary_top": 80,
+        "mapped": 20,
+        "packet_candidates": 6,
+        "packet_plan_only": 8,
+        "packet_chars": 7009,
+        "audit_estimated_total_tokens": 7524,
+        "spark_not_candidate": true,
+        "flink_not_candidate": true,
+        "spark_full_parse_plan_only": true,
+        "flink_full_parse_plan_only": true
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"repo\": \"C:\\\\Users\\\\eldar\\\\AppData\\\\Local\\\\Temp\\\\pyroscope-complex-profile-smoke\\\\repo\",\n  \"summary_top\": 80,\n  \"mapped\": 20,\n  \"packet_candidates\": 6,\n  \"packet_plan_only\": 8,\n  \"packet_chars\": 7009,\n  \"audit_estimated_total_tokens\": 7524,\n  \"spark_not_candidate\": true,\n  \"flink_not_candidate\": true,\n  \"spark_full_parse_plan_only\": true,\n  \"flink_full_parse_plan_only\": true\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "profile_budget_stress",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 21.8,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-profile-analyzer\\scripts\\pyroscope_profile_budget_stress.py"
+      ],
+      "json": {
+        "ok": true,
+        "summary_top": 120,
+        "packet_chars": 7011,
+        "audit_estimated_total_tokens": 7528,
+        "noise_files": 3000,
+        "noise_stacks": 300000,
+        "folded_bytes": 12093156,
+        "unique_frames": 3062,
+        "indexed_files": 3009
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"noise_files\": 3000,\n  \"noise_stacks\": 300000,\n  \"folded_bytes\": 12093156,\n  \"summary_top\": 120,\n  \"unique_frames\": 3062,\n  \"indexed_files\": 3009,\n  \"packet_chars\": 7011,\n  \"audit_estimated_total_tokens\": 7528,\n  \"candidate_hotspots\": 6,\n  \"plan_only_hotspots\": 8\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "benchmark_budget",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 0.16,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_weak_model_benchmark.py",
+        "--budget-only",
+        "--max-context-tokens",
+        "128000",
+        "--max-prompt-chars",
+        "20000",
+        "--out-dir",
+        "D:\\tmp\\pyroscope-skill-lab\\validation-after-extra100-v4-public\\weak-model-benchmark"
+      ],
+      "json": {
+        "ok": true,
+        "case_count": 50,
+        "max_estimated_tokens": 3508,
+        "max_assembled_prompt_chars": 14029
+      },
+      "stdout_tail": "00,\n        \"max_prompt_chars\": 20000\n      },\n      \"worst_feedback\": {\n        \"task_prompt_chars\": 6595,\n        \"assembled_prompt_chars_estimate\": 13911,\n        \"estimated_tokens\": 3478,\n        \"max_context_tokens\": 128000,\n        \"max_prompt_chars\": 20000\n      }\n    },\n    {\n      \"case_id\": \"mixed_large_bounded_packet_analysis\",\n      \"runtime\": \"mixed\",\n      \"difficulty\": \"complex\",\n      \"empty_feedback\": {\n        \"task_prompt_chars\": 5400,\n        \"assembled_prompt_chars_estimate\": 12716,\n        \"estimated_tokens\": 3179,\n        \"max_context_tokens\": 128000,\n        \"max_prompt_chars\": 20000\n      },\n      \"worst_feedback\": {\n        \"task_prompt_chars\": 6649,\n        \"assembled_prompt_chars_estimate\": 13965,\n        \"estimated_tokens\": 3492,\n        \"max_context_tokens\": 128000,\n        \"max_prompt_chars\": 20000\n      }\n    },\n    {\n      \"case_id\": \"mixed_memory_profile_thresholds\",\n      \"runtime\": \"mixed\",\n      \"difficulty\": \"hard\",\n      \"empty_feedback\": {\n        \"task_prompt_chars\": 5352,\n        \"assembled_prompt_chars_estimate\": 12668,\n        \"estimated_tokens\": 3167,\n        \"max_context_tokens\": 128000,\n        \"max_prompt_chars\": 20000\n      },\n      \"worst_feedback\": {\n        \"task_prompt_chars\": 6601,\n        \"assembled_prompt_chars_estimate\": 13917,\n        \"estimated_tokens\": 3480,\n        \"max_context_tokens\": 128000,\n        \"max_prompt_chars\": 20000\n      }\n    },\n    {\n      \"case_id\": \"mixed_complex_orchestration\",\n      \"runtime\": \"mixed\",\n      \"difficulty\": \"complex\",\n      \"empty_feedback\": {\n        \"task_prompt_chars\": 5356,\n        \"assembled_prompt_chars_estimate\": 12672,\n        \"estimated_tokens\": 3168,\n        \"max_context_tokens\": 128000,\n        \"max_prompt_chars\": 20000\n      },\n      \"worst_feedback\": {\n        \"task_prompt_chars\": 6605,\n        \"assembled_prompt_chars_estimate\": 13921,\n        \"estimated_tokens\": 3481,\n        \"max_context_tokens\": 128000,\n        \"max_prompt_chars\": 20000\n      }\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "packet_audit_existing_mixed_report",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 0.14,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-orchestrator\\scripts\\pyroscope_weak_model_audit.py",
+        "--report",
+        "D:\\tmp\\pyroscope-skill-lab\\validation-after-extra100-v4-public\\packet-audit-fixture\\report.md",
+        "--packet",
+        "D:\\tmp\\pyroscope-skill-lab\\validation-after-extra100-v4-public\\packet-audit-fixture\\packet.json",
+        "--max-context-tokens",
+        "128000",
+        "--max-packet-chars",
+        "8000"
+      ],
+      "json": {
+        "ok": true,
+        "context_budget": {
+          "estimated_total_tokens": 5198,
+          "max_context_tokens": 128000,
+          "fits_context": true,
+          "note": "Estimate uses chars/4 to avoid tokenizer dependencies; actual prompt size may be lower or higher by model tokenizer."
+        },
+        "packet_schema": {
+          "validated": true,
+          "hotspot_counts": {
+            "implementation_candidates": 1,
+            "plan_only": 2,
+            "total_rows": 3
+          }
+        },
+        "scripts": {
+          "image_tool": true,
+          "image_smoke": true,
+          "image_docker_smoke": true,
+          "git_workflow": true,
+          "git_workflow_smoke": true,
+          "profile_tool": true,
+          "stress_fixture": true,
+          "complex_profile_smoke": true,
+          "profile_budget_stress": true,
+          "local_roundtrip_smoke": true,
+          "orchestrator": true,
+          "packet_generator": true,
+          "packet_smoke": true,
+          "harness_smoke": true,
+          "validation_suite": true,
+          "airgap_bundle": true
+        }
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"skills\": {\n    \"pyroscope-image-instrumenter\": {\n      \"chars\": 6615,\n      \"lines\": 135,\n      \"estimated_tokens\": 1654\n    },\n    \"pyroscope-profile-analyzer\": {\n      \"chars\": 4407,\n      \"lines\": 95,\n      \"estimated_tokens\": 1102\n    },\n    \"pyroscope-orchestrator\": {\n      \"chars\": 5716,\n      \"lines\": 85,\n      \"estimated_tokens\": 1429\n    }\n  },\n  \"report\": {\n    \"chars\": 668,\n    \"lines\": 13,\n    \"estimated_tokens\": 167\n  },\n  \"packet\": {\n    \"chars\": 3381,\n    \"lines\": 2,\n    \"estimated_tokens\": 846\n  },\n  \"packet_schema\": {\n    \"validated\": true,\n    \"hotspot_counts\": {\n      \"implementation_candidates\": 1,\n      \"plan_only\": 2,\n      \"total_rows\": 3\n    }\n  },\n  \"context_budget\": {\n    \"estimated_total_tokens\": 5198,\n    \"max_context_tokens\": 128000,\n    \"fits_context\": true,\n    \"note\": \"Estimate uses chars/4 to avoid tokenizer dependencies; actual prompt size may be lower or higher by model tokenizer.\"\n  },\n  \"scripts\": {\n    \"image_tool\": true,\n    \"image_smoke\": true,\n    \"image_docker_smoke\": true,\n    \"git_workflow\": true,\n    \"git_workflow_smoke\": true,\n    \"profile_tool\": true,\n    \"stress_fixture\": true,\n    \"complex_profile_smoke\": true,\n    \"profile_budget_stress\": true,\n    \"local_roundtrip_smoke\": true,\n    \"orchestrator\": true,\n    \"packet_generator\": true,\n    \"packet_smoke\": true,\n    \"harness_smoke\": true,\n    \"validation_suite\": true,\n    \"airgap_bundle\": true\n  },\n  \"failures\": [],\n  \"interpretation\": \"PASS means a weak model can route from short skill instructions to deterministic scripts and consume a compact report or packet without raw profile data.\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": "local_pyroscope_roundtrip",
+      "ok": true,
+      "returncode": 0,
+      "elapsed_seconds": 2.46,
+      "command": [
+        "C:\\Python314\\python.exe",
+        "C:\\Users\\eldar\\.codex\\skills\\pyroscope-profile-analyzer\\scripts\\pyroscope_local_roundtrip_smoke.py",
+        "--url",
+        "http://localhost:4040"
+      ],
+      "json": {
+        "ok": true,
+        "packet_chars": 7006,
+        "audit_estimated_total_tokens": 7571,
+        "top_count": 30,
+        "observed": [
+          "expensive_serializer",
+          "regex_parser"
+        ],
+        "started_container": false
+      },
+      "stdout_tail": "{\n  \"ok\": true,\n  \"url\": \"http://localhost:4040\",\n  \"service\": \"roundtrip-1780923364\",\n  \"top_count\": 30,\n  \"observed\": [\n    \"expensive_serializer\",\n    \"regex_parser\"\n  ],\n  \"packet_chars\": 7006,\n  \"audit_estimated_total_tokens\": 7571,\n  \"first_functions\": [\n    \"total\",\n    \"root\",\n    \"expensive_serializer\",\n    \"api_handler\",\n    \"load_customer\",\n    \"regex_parser\",\n    \"ingest_worker\",\n    \"normalize\"\n  ],\n  \"started_container\": false\n}\n",
+      "stderr_tail": ""
+    }
+  ]
+}

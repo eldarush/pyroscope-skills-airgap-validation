@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pyroscope Orchestrator"
+  short_description: "Route Pyroscope image and profile workflows safely."
+  default_prompt: "Decide whether to instrument a repo image, analyze Pyroscope data, or run both when profile data exists."

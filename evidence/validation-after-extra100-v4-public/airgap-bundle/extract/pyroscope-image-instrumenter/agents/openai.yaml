@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pyroscope Image Instrumenter"
+  short_description: "Create safe Pyroscope profiling images from existing repos."
+  default_prompt: "Add a Pyroscope profiling image workflow to this repository without changing production tags or deploying it."

@@ -1,0 +1,110 @@
+{
+  "ok": false,
+  "blocked": true,
+  "reason": "no hosted weak-model candidate is currently available",
+  "probes": [
+    {
+      "candidate": {
+        "name": "claude-copilot:id:gpt-3.5-turbo",
+        "harness": "claude-copilot",
+        "model": "id:gpt-3.5-turbo",
+        "strength": "weakest-hosted-airgap-proxy"
+      },
+      "ok": false,
+      "blocked": true,
+      "returncode": 1,
+      "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-hosted-probe-current\\20260608-124307-141-33acf476-claude-copilot-id_gpt-3.5-turbo.md",
+      "stderr_tail": "\u001b[31;1mWrite-Error: \u001b[0mD:\\QaaS\\_tools\\weak-model-session.ps1:882\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 882 | \u001b[0m     \u001b[36;1mWrite-Error \"One or more weak-model validation runs failed. See t\u001b[0m .\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mOne or more weak-model validation runs failed. See transcript paths above.\u001b[0m\n",
+      "prompt_budget": {
+        "task_prompt_chars": 33,
+        "assembled_prompt_chars_estimate": 7141,
+        "estimated_tokens": 1786,
+        "max_context_tokens": 128000,
+        "max_prompt_chars": 20000
+      }
+    },
+    {
+      "candidate": {
+        "name": "copilot:mai-code-1-flash",
+        "harness": "copilot",
+        "model": "mai-code-1-flash",
+        "reasoning": "none",
+        "strength": "weak-hosted-flash"
+      },
+      "ok": false,
+      "blocked": true,
+      "returncode": 1,
+      "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-hosted-probe-current\\20260608-124312-567-6c9822b8-copilot-mai-code-1-flash.md",
+      "stderr_tail": "\u001b[31;1mWrite-Error: \u001b[0mD:\\QaaS\\_tools\\weak-model-session.ps1:882\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 882 | \u001b[0m     \u001b[36;1mWrite-Error \"One or more weak-model validation runs failed. See t\u001b[0m .\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mOne or more weak-model validation runs failed. See transcript paths above.\u001b[0m\n",
+      "prompt_budget": {
+        "task_prompt_chars": 33,
+        "assembled_prompt_chars_estimate": 7141,
+        "estimated_tokens": 1786,
+        "max_context_tokens": 128000,
+        "max_prompt_chars": 20000
+      }
+    },
+    {
+      "candidate": {
+        "name": "copilot:gemini-3.5-flash",
+        "harness": "copilot",
+        "model": "gemini-3.5-flash",
+        "reasoning": "none",
+        "strength": "weak-hosted-flash"
+      },
+      "ok": false,
+      "blocked": true,
+      "returncode": 1,
+      "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-hosted-probe-current\\20260608-124318-859-9ecfa88a-copilot-gemini-3.5-flash.md",
+      "stderr_tail": "\u001b[31;1mWrite-Error: \u001b[0mD:\\QaaS\\_tools\\weak-model-session.ps1:882\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 882 | \u001b[0m     \u001b[36;1mWrite-Error \"One or more weak-model validation runs failed. See t\u001b[0m .\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mOne or more weak-model validation runs failed. See transcript paths above.\u001b[0m\n",
+      "prompt_budget": {
+        "task_prompt_chars": 33,
+        "assembled_prompt_chars_estimate": 7141,
+        "estimated_tokens": 1786,
+        "max_context_tokens": 128000,
+        "max_prompt_chars": 20000
+      }
+    },
+    {
+      "candidate": {
+        "name": "copilot:claude-haiku-4.5",
+        "harness": "copilot",
+        "model": "claude-haiku-4.5",
+        "reasoning": "none",
+        "strength": "weak-hosted-haiku"
+      },
+      "ok": false,
+      "blocked": true,
+      "returncode": 1,
+      "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-hosted-probe-current\\20260608-124329-358-9f32df8d-copilot-claude-haiku-4.5.md",
+      "stderr_tail": "\u001b[31;1mWrite-Error: \u001b[0mD:\\QaaS\\_tools\\weak-model-session.ps1:882\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 882 | \u001b[0m     \u001b[36;1mWrite-Error \"One or more weak-model validation runs failed. See t\u001b[0m .\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mOne or more weak-model validation runs failed. See transcript paths above.\u001b[0m\n",
+      "prompt_budget": {
+        "task_prompt_chars": 33,
+        "assembled_prompt_chars_estimate": 7141,
+        "estimated_tokens": 1786,
+        "max_context_tokens": 128000,
+        "max_prompt_chars": 20000
+      }
+    },
+    {
+      "candidate": {
+        "name": "codex:gpt-5.3-codex-spark",
+        "harness": "codex",
+        "profile": "airgapped",
+        "strength": "validated-fallback-only"
+      },
+      "ok": false,
+      "blocked": true,
+      "returncode": 1,
+      "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-hosted-probe-current\\20260608-124339-116-c5d77f66-codex-gpt-5.3-codex-spark.md",
+      "stderr_tail": "\u001b[31;1mWrite-Error: \u001b[0mD:\\QaaS\\_tools\\weak-model-session.ps1:882\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1mLine |\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m 882 | \u001b[0m     \u001b[36;1mWrite-Error \"One or more weak-model validation runs failed. See t\u001b[0m .\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m     | \u001b[31;1m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[31;1m\u001b[0m\u001b[36;1m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[0m\u001b[36;1m\u001b[31;1m\u001b[31;1m\u001b[36;1m     | \u001b[31;1mOne or more weak-model validation runs failed. See transcript paths above.\u001b[0m\n",
+      "prompt_budget": {
+        "task_prompt_chars": 33,
+        "assembled_prompt_chars_estimate": 7141,
+        "estimated_tokens": 1786,
+        "max_context_tokens": 128000,
+        "max_prompt_chars": 20000
+      }
+    }
+  ]
+}

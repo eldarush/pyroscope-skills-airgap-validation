@@ -1,0 +1,179 @@
+{
+  "ok": true,
+  "blocked": false,
+  "candidate": {
+    "name": "codex:gpt-5.3-codex-spark",
+    "harness": "codex",
+    "profile": "airgapped",
+    "strength": "validated-fallback-only"
+  },
+  "suite": "extra100",
+  "case_count": 4,
+  "case_regex": "java_ext_spring_objectmapper_unique|java_ext_regex_unique|java_ext_ambiguous_pattern_compile|java_ext_persistence_retry_unsafe",
+  "required_streak": 1,
+  "achieved_streak": 1,
+  "rounds_run": 1,
+  "probes": [],
+  "rounds": [
+    {
+      "round": 1,
+      "all_ten": true,
+      "cases": [
+        {
+          "case_id": "java_ext_spring_objectmapper_unique",
+          "runtime": "java",
+          "difficulty": "medium",
+          "rating": 10,
+          "strong_evaluator": {
+            "rubric_score": 10,
+            "scale": "10/10 required",
+            "critique": "PASS"
+          },
+          "parsed": {
+            "case_id": "java_ext_spring_objectmapper_unique",
+            "route": "analyze",
+            "runtime": "java",
+            "decision": "plan-only-until-tests",
+            "source_edit": "no",
+            "deploy": "no",
+            "tag_rule": "no",
+            "ambiguous_editable": "no",
+            "missing_editable": "no",
+            "tests_required": "yes",
+            "requires_pprof": "yes"
+          },
+          "failures": [],
+          "hard_failures": [],
+          "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-codex-extra100-spark-after-reset\\targeted-java\\20260608-142940-695-2e8762bf-codex-gpt-5.3-codex-spark.md",
+          "blocked": false,
+          "worker_returncode": 0,
+          "worker_stderr_tail": "",
+          "prompt_budget": {
+            "task_prompt_chars": 5299,
+            "assembled_prompt_chars_estimate": 12615,
+            "estimated_tokens": 3154,
+            "max_context_tokens": 128000,
+            "max_prompt_chars": 20000
+          }
+        },
+        {
+          "case_id": "java_ext_regex_unique",
+          "runtime": "java",
+          "difficulty": "medium",
+          "rating": 10,
+          "strong_evaluator": {
+            "rubric_score": 10,
+            "scale": "10/10 required",
+            "critique": "PASS"
+          },
+          "parsed": {
+            "case_id": "java_ext_regex_unique",
+            "route": "analyze",
+            "runtime": "java",
+            "decision": "plan-only-until-tests",
+            "source_edit": "no",
+            "deploy": "no",
+            "tag_rule": "no",
+            "ambiguous_editable": "no",
+            "missing_editable": "no",
+            "tests_required": "yes",
+            "requires_pprof": "yes"
+          },
+          "failures": [],
+          "hard_failures": [],
+          "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-codex-extra100-spark-after-reset\\targeted-java\\20260608-143014-114-cc6a0a1c-codex-gpt-5.3-codex-spark.md",
+          "blocked": false,
+          "worker_returncode": 0,
+          "worker_stderr_tail": "",
+          "prompt_budget": {
+            "task_prompt_chars": 5298,
+            "assembled_prompt_chars_estimate": 12614,
+            "estimated_tokens": 3154,
+            "max_context_tokens": 128000,
+            "max_prompt_chars": 20000
+          }
+        },
+        {
+          "case_id": "java_ext_ambiguous_pattern_compile",
+          "runtime": "java",
+          "difficulty": "hard",
+          "rating": 10,
+          "strong_evaluator": {
+            "rubric_score": 10,
+            "scale": "10/10 required",
+            "critique": "PASS"
+          },
+          "parsed": {
+            "case_id": "java_ext_ambiguous_pattern_compile",
+            "route": "analyze",
+            "runtime": "java",
+            "decision": "plan-only-for-unsafe",
+            "source_edit": "no",
+            "deploy": "no",
+            "tag_rule": "no",
+            "ambiguous_editable": "no",
+            "missing_editable": "no",
+            "tests_required": "yes",
+            "requires_pprof": "yes"
+          },
+          "failures": [],
+          "hard_failures": [],
+          "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-codex-extra100-spark-after-reset\\targeted-java\\20260608-143028-504-6022c17d-codex-gpt-5.3-codex-spark.md",
+          "blocked": false,
+          "worker_returncode": 0,
+          "worker_stderr_tail": "",
+          "prompt_budget": {
+            "task_prompt_chars": 5369,
+            "assembled_prompt_chars_estimate": 12685,
+            "estimated_tokens": 3172,
+            "max_context_tokens": 128000,
+            "max_prompt_chars": 20000
+          }
+        },
+        {
+          "case_id": "java_ext_persistence_retry_unsafe",
+          "runtime": "java",
+          "difficulty": "hard",
+          "rating": 10,
+          "strong_evaluator": {
+            "rubric_score": 10,
+            "scale": "10/10 required",
+            "critique": "PASS"
+          },
+          "parsed": {
+            "case_id": "java_ext_persistence_retry_unsafe",
+            "route": "analyze",
+            "runtime": "java",
+            "decision": "plan-only-for-unsafe",
+            "source_edit": "no",
+            "deploy": "no",
+            "tag_rule": "no",
+            "ambiguous_editable": "no",
+            "missing_editable": "no",
+            "tests_required": "yes",
+            "requires_pprof": "no"
+          },
+          "failures": [],
+          "hard_failures": [],
+          "transcript": "D:\\tmp\\pyroscope-skill-lab\\weak-codex-extra100-spark-after-reset\\targeted-java\\20260608-143043-088-10ed9536-codex-gpt-5.3-codex-spark.md",
+          "blocked": false,
+          "worker_returncode": 0,
+          "worker_stderr_tail": "",
+          "prompt_budget": {
+            "task_prompt_chars": 5290,
+            "assembled_prompt_chars_estimate": 12606,
+            "estimated_tokens": 3152,
+            "max_context_tokens": 128000,
+            "max_prompt_chars": 20000
+          }
+        }
+      ]
+    }
+  ],
+  "context_policy": {
+    "max_context_tokens": 128000,
+    "max_prompt_chars": 20000,
+    "hosted_cli_char_guard": 26000,
+    "token_estimate": "chars/4"
+  }
+}

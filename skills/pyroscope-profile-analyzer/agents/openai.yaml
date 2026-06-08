@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pyroscope Profile Analyzer"
+  short_description: "Analyze Pyroscope profiles and produce safe optimization plans."
+  default_prompt: "Analyze Pyroscope data for this service, map hotspots to source code, and propose safe behavior-preserving optimizations."
