@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Pyroscope skills validation status overview</title>
+  <desc id="desc">A visual overview of the Pyroscope skills validation package status, benchmark result, local Pyroscope round-trip, and airgap bundle.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f4f7f6; }
+      .panel { fill: #ffffff; stroke: #d9e2de; stroke-width: 1.5; }
+      .ink { fill: #17201d; font-family: Segoe UI, Arial, sans-serif; }
+      .muted { fill: #61706b; font-family: Segoe UI, Arial, sans-serif; }
+      .small { font-size: 18px; }
+      .label { font-size: 16px; font-weight: 700; letter-spacing: .06em; }
+      .h1 { font-size: 46px; font-weight: 750; }
+      .h2 { font-size: 24px; font-weight: 750; }
+      .metric { font-size: 42px; font-weight: 760; }
+      .pill { fill: #e7f5ee; stroke: #bfe2d1; stroke-width: 1.2; }
+      .pill-warn { fill: #fff2d8; stroke: #f1d59d; stroke-width: 1.2; }
+      .pill-blue { fill: #e8f1fb; stroke: #bfd4ea; stroke-width: 1.2; }
+      .ok { fill: #0f7a4f; font-weight: 700; }
+      .warn { fill: #9a5b00; font-weight: 700; }
+      .blue { fill: #245b8f; font-weight: 700; }
+      .code { fill: #273633; font-family: Consolas, Cascadia Mono, monospace; font-size: 16px; }
+      .line { stroke: #d9e2de; stroke-width: 1.2; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="760"/>
+
+  <g transform="translate(54 44)">
+    <rect class="pill" x="0" y="0" rx="17" ry="17" width="180" height="34"/>
+    <text class="ink ok small" x="18" y="23">Current state: green</text>
+    <rect class="pill-blue" x="194" y="0" rx="17" ry="17" width="216" height="34"/>
+    <text class="ink blue small" x="212" y="23">Generated: 2026-06-08</text>
+    <rect class="pill-warn" x="424" y="0" rx="17" ry="17" width="218" height="34"/>
+    <text class="ink warn small" x="442" y="23">MiniMax proxy caveat</text>
+
+    <text class="ink h1" x="0" y="96">Pyroscope Skills Validation Status</text>
+    <text class="muted small" x="0" y="132">Skills are built, bundled, locally validated, and tested against the weakest currently runnable Codex-hosted model path.</text>
+
+    <g transform="translate(0 176)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="360" height="124"/>
+      <text class="ink metric" x="24" y="56">100</text>
+      <text class="muted small" x="24" y="88">extra benchmark cases</text>
+      <text class="muted small" x="24" y="112">across 7 runtime groups</text>
+
+      <rect class="panel" x="392" y="0" rx="8" ry="8" width="360" height="124"/>
+      <text class="ink metric" x="416" y="56">2/2</text>
+      <text class="muted small" x="416" y="88">required perfect-round streak</text>
+      <text class="muted small" x="416" y="112">achieved on Codex Spark</text>
+
+      <rect class="panel" x="784" y="0" rx="8" ry="8" width="360" height="124"/>
+      <text class="ink metric" x="808" y="56">13</text>
+      <text class="muted small" x="808" y="88">deterministic checks passed</text>
+      <text class="muted small" x="808" y="112">including local Pyroscope</text>
+    </g>
+
+    <g transform="translate(0 326)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="730" height="276"/>
+      <text class="ink h2" x="24" y="42">Weak Model Benchmark</text>
+      <line class="line" x1="24" y1="64" x2="706" y2="64"/>
+
+      <text class="muted label" x="24" y="100">CANDIDATE</text>
+      <text class="code" x="210" y="100">codex:gpt-5.3-codex-spark</text>
+      <rect class="pill" x="536" y="78" rx="15" ry="15" width="82" height="30"/>
+      <text class="ink ok small" x="556" y="100">PASS</text>
+
+      <text class="muted label" x="24" y="142">SUITE</text>
+      <text class="code" x="210" y="142">extra100</text>
+
+      <text class="muted label" x="24" y="184">ROUND 1</text>
+      <text class="ink small" x="210" y="184">99/100, one conservative raw-JSON miss</text>
+
+      <text class="muted label" x="24" y="226">ROUNDS 2-3</text>
+      <text class="ink small" x="210" y="226">100/100 each; achieved_streak=2</text>
+    </g>
+
+    <g transform="translate(760 326)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="384" height="276"/>
+      <text class="ink h2" x="24" y="42">Profile Analysis Proof</text>
+      <line class="line" x1="24" y1="64" x2="360" y2="64"/>
+      <text class="muted label" x="24" y="100">ROUND TRIP</text>
+      <text class="ink ok small" x="184" y="100">PASS</text>
+      <text class="muted label" x="24" y="142">PACKET</text>
+      <text class="code" x="184" y="142">7006 chars</text>
+      <text class="muted label" x="24" y="184">TOKENS</text>
+      <text class="code" x="184" y="184">7571 est.</text>
+      <text class="muted label" x="24" y="226">HOTSPOTS</text>
+      <text class="code" x="184" y="226">expensive_serializer</text>
+      <text class="code" x="184" y="250">regex_parser</text>
+    </g>
+
+    <g transform="translate(0 628)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="1144" height="72"/>
+      <text class="ink h2" x="24" y="45">Airgap bundle verified:</text>
+      <text class="code" x="274" y="45">artifacts/pyroscope-skills-airgap-20260608-extra100-v4-public.zip</text>
+    </g>
+  </g>
+</svg>

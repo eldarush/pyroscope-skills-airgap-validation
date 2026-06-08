@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img" aria-labelledby="title desc">
+  <title id="title">Framework and runtime support matrix</title>
+  <desc id="desc">A matrix showing Pyroscope image instrumentation, profile analysis, and safety behavior for Python, .NET, Java, Spark, Flink, Go, and mixed repositories.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f4f7f6; }
+      .panel { fill: #ffffff; stroke: #d9e2de; stroke-width: 1.5; }
+      .header { fill: #e8f1fb; stroke: #bfd4ea; stroke-width: 1.2; }
+      .okbox { fill: #e7f5ee; stroke: #bfe2d1; stroke-width: 1.1; }
+      .warnbox { fill: #fff2d8; stroke: #f1d59d; stroke-width: 1.1; }
+      .ink { fill: #17201d; font-family: Segoe UI, Arial, sans-serif; }
+      .muted { fill: #61706b; font-family: Segoe UI, Arial, sans-serif; }
+      .ok { fill: #0f7a4f; font-weight: 700; }
+      .warn { fill: #9a5b00; font-weight: 700; }
+      .blue { fill: #245b8f; font-weight: 700; }
+      .h1 { font-size: 44px; font-weight: 760; }
+      .h2 { font-size: 24px; font-weight: 750; }
+      .small { font-size: 17px; }
+      .tiny { font-size: 14px; }
+      .runtime { font-size: 20px; font-weight: 760; }
+      .code { fill: #273633; font-family: Consolas, Cascadia Mono, monospace; font-size: 14px; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="900"/>
+
+  <g transform="translate(54 44)">
+    <text class="ink h1" x="0" y="48">Frameworks and Workflows Covered</text>
+    <text class="muted small" x="0" y="82">The skills are built for image-only profiling changes, bounded Pyroscope profile analysis, and safe optimization planning across these runtimes.</text>
+
+    <g transform="translate(0 118)">
+      <rect class="header" x="0" y="0" rx="8" ry="8" width="220" height="54"/>
+      <rect class="header" x="232" y="0" rx="8" ry="8" width="244" height="54"/>
+      <rect class="header" x="488" y="0" rx="8" ry="8" width="244" height="54"/>
+      <rect class="header" x="744" y="0" rx="8" ry="8" width="190" height="54"/>
+      <rect class="header" x="946" y="0" rx="8" ry="8" width="198" height="54"/>
+      <text class="ink blue small" x="20" y="34">Runtime</text>
+      <text class="ink blue small" x="252" y="34">Image support</text>
+      <text class="ink blue small" x="508" y="34">Profile analysis</text>
+      <text class="ink blue small" x="764" y="34">Optimization</text>
+      <text class="ink blue small" x="966" y="34">Special guard</text>
+    </g>
+
+    <g transform="translate(0 188)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="1144" height="74"/>
+      <text class="ink runtime" x="20" y="32">Python</text>
+      <text class="muted tiny" x="20" y="56">Django, FastAPI, Celery, Poetry</text>
+      <text class="ink small" x="252" y="32">Dockerfile/CI/bootstrap</text>
+      <text class="muted tiny" x="252" y="56">pyroscope package or airgap wheel bundle</text>
+      <text class="ink small" x="508" y="32">Folded and live profile windows</text>
+      <text class="muted tiny" x="508" y="56">unique source mapping required</text>
+      <rect class="okbox" x="764" y="18" rx="15" ry="15" width="118" height="30"/>
+      <text class="ink ok tiny" x="786" y="38">packet-gated</text>
+      <text class="muted tiny" x="966" y="32">reject secrets and ambiguous Dockerfiles</text>
+    </g>
+
+    <g transform="translate(0 276)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="1144" height="74"/>
+      <text class="ink runtime" x="20" y="32">.NET / C#</text>
+      <text class="muted tiny" x="20" y="56">ASP.NET, workers, Alpine musl</text>
+      <text class="ink small" x="252" y="32">Profiler env plus native assets</text>
+      <text class="muted tiny" x="252" y="56">glibc/musl and architecture checks</text>
+      <text class="ink small" x="508" y="32">CPU/allocation hotspot reports</text>
+      <text class="muted tiny" x="508" y="56">EF/LINQ candidates are test-gated</text>
+      <rect class="okbox" x="764" y="18" rx="15" ry="15" width="118" height="30"/>
+      <text class="ink ok tiny" x="786" y="38">packet-gated</text>
+      <text class="muted tiny" x="966" y="32">no auth, persistence, retry, timeout edits</text>
+    </g>
+
+    <g transform="translate(0 364)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="1144" height="74"/>
+      <text class="ink runtime" x="20" y="32">Java</text>
+      <text class="muted tiny" x="20" y="56">Plain JVM, Spring services</text>
+      <text class="ink small" x="252" y="32">Java agent in Dockerfile</text>
+      <text class="muted tiny" x="252" y="56">preserves existing JAVA_TOOL_OPTIONS</text>
+      <text class="ink small" x="508" y="32">JFR-derived hotspot summaries</text>
+      <text class="muted tiny" x="508" y="56">unique local mapping required</text>
+      <rect class="okbox" x="764" y="18" rx="15" ry="15" width="118" height="30"/>
+      <text class="ink ok tiny" x="786" y="38">packet-gated</text>
+      <text class="muted tiny" x="966" y="32">ambiguous Pattern.compile is plan-only</text>
+    </g>
+
+    <g transform="translate(0 452)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="1144" height="74"/>
+      <text class="ink runtime" x="20" y="32">Apache Spark</text>
+      <text class="muted tiny" x="20" y="56">Scala/Java Spark images</text>
+      <text class="ink small" x="252" y="32">Driver/executor agent wiring</text>
+      <text class="muted tiny" x="252" y="56">image-only tag suffix is enforced</text>
+      <text class="ink small" x="508" y="32">Hotspot summaries with source map</text>
+      <text class="muted tiny" x="508" y="56">framework frames ignored</text>
+      <rect class="warnbox" x="764" y="18" rx="15" ry="15" width="132" height="30"/>
+      <text class="ink warn tiny" x="786" y="38">mostly plan-only</text>
+      <text class="muted tiny" x="966" y="32">no repartition/cache/checkpoint semantics</text>
+    </g>
+
+    <g transform="translate(0 540)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="1144" height="74"/>
+      <text class="ink runtime" x="20" y="32">Apache Flink</text>
+      <text class="muted tiny" x="20" y="56">Flink jobs and custom serializers</text>
+      <text class="ink small" x="252" y="32">Java agent image wiring</text>
+      <text class="muted tiny" x="252" y="56">checkpoint framework frames are ignored</text>
+      <text class="ink small" x="508" y="32">Serializer allocation candidates</text>
+      <text class="muted tiny" x="508" y="56">local-only proof required</text>
+      <rect class="warnbox" x="764" y="18" rx="15" ry="15" width="132" height="30"/>
+      <text class="ink warn tiny" x="786" y="38">mostly plan-only</text>
+      <text class="muted tiny" x="966" y="32">no state, timer, TTL, checkpoint edits</text>
+    </g>
+
+    <g transform="translate(0 628)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="1144" height="74"/>
+      <text class="ink runtime" x="20" y="32">Go</text>
+      <text class="muted tiny" x="20" y="56">Services with pprof or collector bundle</text>
+      <text class="ink small" x="252" y="32">Conditional Dockerfile-only support</text>
+      <text class="muted tiny" x="252" y="56">requires reachable pprof or approved collector</text>
+      <text class="ink small" x="508" y="32">Go CPU/allocation profile packets</text>
+      <text class="muted tiny" x="508" y="56">stdlib/runtime frames are not editable</text>
+      <rect class="okbox" x="764" y="18" rx="15" ry="15" width="118" height="30"/>
+      <text class="ink ok tiny" x="786" y="38">packet-gated</text>
+      <text class="muted tiny" x="966" y="32">no concurrency or timeout behavior edits</text>
+    </g>
+
+    <g transform="translate(0 716)">
+      <rect class="panel" x="0" y="0" rx="8" ry="8" width="1144" height="74"/>
+      <text class="ink runtime" x="20" y="32">Mixed repos</text>
+      <text class="muted tiny" x="20" y="56">Monorepos, CI, Compose, PR/MR flow</text>
+      <text class="ink small" x="252" y="32">Selected service only</text>
+      <text class="muted tiny" x="252" y="56">requires explicit Dockerfile/build context</text>
+      <text class="ink small" x="508" y="32">Bounded packets, many-frame stress</text>
+      <text class="muted tiny" x="508" y="56">raw JSON is converted before model use</text>
+      <rect class="okbox" x="764" y="18" rx="15" ry="15" width="118" height="30"/>
+      <text class="ink ok tiny" x="786" y="38">route-gated</text>
+      <text class="muted tiny" x="966" y="32">no deploy, merge, prod tags, or secrets</text>
+    </g>
+
+    <g transform="translate(0 824)">
+      <text class="muted small" x="0" y="0">Benchmark coverage: 14 Python, 14 .NET, 14 Java, 14 Spark, 14 Flink, 14 Go, 16 mixed repository cases.</text>
+      <text class="muted small" x="0" y="30">All profile analysis is weak-model friendly: summarize first, generate packet, audit context, then reason from bounded evidence.</text>
+    </g>
+  </g>
+</svg>

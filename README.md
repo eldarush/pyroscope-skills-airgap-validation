@@ -22,12 +22,33 @@ The current package was validated on 2026-06-08.
 
 Important caveat: the preferred MiniMax-like hosted routes were blocked or unavailable in this environment. `gpt-5.3-codex-spark` is the weakest runnable Codex-hosted fallback here, but it may still be stronger than MiniMax M2.5. The skills are therefore designed to keep weak-model work deterministic, compact, and safety-gated.
 
+## Visual Overview
+
+![Pyroscope skills validation status](assets/status-overview.svg)
+
+![Pyroscope framework support matrix](assets/framework-support.svg)
+
+## Frameworks It Works With
+
+| Runtime or framework family | Image instrumentation | Profile analysis | Optimization behavior |
+| --- | --- | --- | --- |
+| Python | Supported for Dockerfile/CI/bootstrap image work, including Django, FastAPI, Gunicorn, Uvicorn, Celery, and Poetry-style images. | Supported through live Pyroscope windows or exported folded profiles. | Only unique local mechanical changes, such as serializer reuse, compiled regex, or allocation cleanup, after tests. |
+| .NET / C# | Supported for ASP.NET and worker images, including glibc and Alpine musl paths when assets match architecture. | Supported for CPU/allocation hotspots and source mapping into local C# code. | Test-gated only; no auth, persistence, retry, timeout, or public contract edits. |
+| Java | Supported through Java agent image wiring while preserving existing `JAVA_TOOL_OPTIONS`. | Supported for JVM/JFR-derived hotspots and source-mapped local Java code. | Test-gated mechanical changes only; ambiguous mappings stay plan-only. |
+| Apache Spark | Supported for Spark JVM images and driver/executor agent wiring. | Supported for Spark-style source frames and hotspot packets. | Mostly plan-only unless the change is local and does not alter repartitioning, caching, checkpointing, or distributed semantics. |
+| Apache Flink | Supported for Flink JVM images and job images. | Supported for Flink-style operators and serializer allocation analysis. | Mostly plan-only unless local and mechanical; no state, timer, TTL, checkpoint, or RocksDB behavior edits. |
+| Go | Conditional support: Dockerfile-only image work is allowed only with an existing reachable pprof endpoint or an approved no-source collector bundle. | Supported for Go CPU/allocation packets, with runtime/stdlib frames ignored. | Test-gated local changes only; no concurrency, channel ordering, timeout, retry, or public API behavior edits. |
+| Mixed monorepos | Supported when the service, Dockerfile, build context, and CI target are explicit. | Supported through bounded weak-model packets across mixed runtime reports. | Route-gated; no deployment, merge, production tags, broad service guesses, or source edits from image-only work. |
+
 ## Folder Layout
 
 ```text
 .
 |-- README.md
 |-- STATUS.html
+|-- assets/
+|   |-- status-overview.svg
+|   `-- framework-support.svg
 |-- artifacts/
 |   `-- pyroscope-skills-airgap-20260608-extra100-v4-public.zip
 |-- skills/
@@ -35,7 +56,7 @@ Important caveat: the preferred MiniMax-like hosted routes were blocked or unava
 |   |-- pyroscope-profile-analyzer/
 |   `-- pyroscope-orchestrator/
 `-- evidence/
-    |-- validation-after-extra100-v2/
+    |-- validation-after-extra100-v4-public/
     |-- weak-codex-extra100-spark-after-reset/
     |-- weak-hosted-probe-current/
     `-- codex-54-mini-java-ambiguity-script-sanity/
